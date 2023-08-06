@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
@@ -14,7 +14,6 @@ const TableRoute = () => {
   }, [location]);
 
   const isAuthenticated = localStorage.getItem('authToken') !== null;
-
   return isAuthenticated ? <TableComponent /> : <Navigate to="/login" />;
 };
 

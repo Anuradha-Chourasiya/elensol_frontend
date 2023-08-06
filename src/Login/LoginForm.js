@@ -23,7 +23,7 @@ const LoginPage = () => {
     e.preventDefault();
     console.log(credential);
     try {
-      const response = await axios.post('/login', credential);
+      const response = await axios.post('https://nodeapp-tnq6.onrender.com/login', credential);
       console.log('log in :', response.data);
       const authToken = response.data.token;
       localStorage.setItem('authToken', authToken);
