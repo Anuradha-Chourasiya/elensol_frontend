@@ -21,7 +21,6 @@ const RegistrationForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    console.log(formData);
     e.preventDefault();
     try {
       const response = await axios.post('https://nodeapp-tnq6.onrender.com/signup', formData);
