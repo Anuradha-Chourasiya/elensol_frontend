@@ -23,8 +23,8 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://nodeapp-tnq6.onrender.com/signup', formData);
-      navigate(`/login`)
+      const response = await axios.post('/signup', formData);
+      navigate(`/login`);
       console.log('Registration successful:', response.data);
     } catch (error) {
       console.error('Registration error:', error);

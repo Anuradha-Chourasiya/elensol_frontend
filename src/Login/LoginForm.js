@@ -23,11 +23,11 @@ const LoginPage = () => {
     e.preventDefault();
     console.log(credential);
     try {
-      const response = await axios.post('https://nodeapp-tnq6.onrender.com/login', credential);
+      const response = await axios.post('/login', credential);
       console.log('log in :', response.data);
-      const authToken = response.data.auth;
+      const authToken = response.data.token;
       localStorage.setItem('authToken', authToken);
-      if(authToken){navigate('/TableComponent');}
+     if(authToken){navigate('/TableComponent');}
       
     } catch (error) {
       console.error('Registration error:', error);
